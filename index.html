@@ -1,76 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple Site</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* Custom Styles */
-        body { padding: 20px; background-color: #f8f9fa; }
-        .carousel-item img {
-            height: 400px; /* Force images to be the same height */
-            object-fit: cover; /* Crop images slightly to fit without stretching */
-        }
-        .container { max-width: 800px; margin-top: 30px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Hessam Shahbazi's personal research resources page for materials science, electrochemistry, and nanoscience."
+    />
+    <title>Hessam Shahbazi | Research Resources</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header" data-header>
+        <a class="brand" href="#home" aria-label="Hessam Shahbazi home">
+          <span class="brand-mark">HS</span>
+          <span class="brand-name">Hessam Shahbazi</span>
+        </a>
 
-    <div class="container">
-        <h1 class="text-center mb-4">Hessam Shahbazi</h1>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
 
-        <div id="carouselExample" class="carousel slide mb-5" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="_2UI3604.jpg" class="d-block w-100" alt="First Slide">
+        <nav class="main-nav" aria-label="Primary navigation" data-nav>
+          <a href="#home">Home</a>
+          <a href="#research">Research</a>
+          <a class="active" href="#resources">Resources</a>
+          <a href="#publications">Publications</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <a class="header-cta" href="mailto:hshahb4@uic.edu">
+          <span>Get in Touch</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 17 17 7M8 7h9v9" />
+          </svg>
+        </a>
+      </header>
+
+      <main>
+        <section class="hero" id="home">
+          <canvas class="hero-canvas" data-network aria-hidden="true"></canvas>
+          <div class="hero-grid" aria-hidden="true"></div>
+          <div class="hero-content">
+            <p class="eyebrow">Resources</p>
+            <h1>Exploring resilient materials and electrochemical systems</h1>
+            <p class="breadcrumb"><a href="#home">Home</a> / Resources</p>
+            <p class="hero-copy">
+              A personal research hub for high-entropy materials, nanoribbon growth,
+              electrochemical energy systems, and the experiments that connect structure
+              to performance.
+            </p>
+          </div>
+        </section>
+
+        <section class="metrics" aria-label="Research highlights">
+          <article>
+            <span>01</span>
+            <strong>Extreme Materials</strong>
+            <p>High-entropy oxide nanoribbons designed for heat, pressure, and chemical resilience.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <strong>Electrochemistry</strong>
+            <p>Carbon electrodes, ion transport, and sustainable reaction pathways for energy storage.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <strong>Open Notes</strong>
+            <p>Readable summaries, selected publications, and links gathered in one place.</p>
+          </article>
+        </section>
+
+        <section class="section research-section" id="research">
+          <div class="section-kicker">Research Focus</div>
+          <div class="split-heading">
+            <h2>Materials research with a structure-first point of view.</h2>
+            <p>
+              This page is designed as a public-facing index for work, papers, notes, and
+              updates. The layout takes inspiration from memQ's resources page while shifting
+              the content toward a personal academic portfolio.
+            </p>
+          </div>
+          <div class="focus-grid">
+            <article class="focus-card">
+              <div class="focus-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3 3 8l9 5 9-5-9-5Z" />
+                  <path d="m3 14 9 5 9-5" />
+                  <path d="m3 11 9 5 9-5" />
+                </svg>
+              </div>
+              <h3>High-entropy materials</h3>
+              <p>Low-dimensional oxides with configurational complexity and unusual stability windows.</p>
+            </article>
+            <article class="focus-card">
+              <div class="focus-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 14c5-8 11 8 16 0" />
+                  <path d="M4 10c5-8 11 8 16 0" />
+                  <path d="M12 4v16" />
+                </svg>
+              </div>
+              <h3>Electrochemical interfaces</h3>
+              <p>Porous electrodes, charge transport, and reaction kinetics in energy and water systems.</p>
+            </article>
+            <article class="focus-card">
+              <div class="focus-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 19h16" />
+                  <path d="M7 16V7" />
+                  <path d="M12 16V4" />
+                  <path d="M17 16v-6" />
+                </svg>
+              </div>
+              <h3>Characterization</h3>
+              <p>Pressure, temperature, microscopy, and spectroscopy views of structure-property links.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section resources-section" id="resources">
+          <div class="section-kicker">Selected Resources</div>
+          <div class="section-heading">
+            <h2>Articles</h2>
+            <p>Publication cards styled for quick scanning, with direct links to records and DOIs.</p>
+          </div>
+
+          <div class="resource-grid">
+            <article class="resource-card">
+              <a
+                class="card-link"
+                href="https://doi.org/10.1126/science.adr5604"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open Resiliency, morphology, and entropic transformations in high-entropy oxide nanoribbons"
+              ></a>
+              <div class="card-media media-ribbon" aria-hidden="true">
+                <span class="ribbon-track"></span>
+                <span class="ribbon-track"></span>
+                <span class="ribbon-track"></span>
+                <span class="atom one"></span>
+                <span class="atom two"></span>
+                <span class="atom three"></span>
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <span>Science</span>
+                  <span>2025</span>
                 </div>
-                <div class="carousel-item">
-                    <img src="_1UI4040.jpg" class="d-block w-100" alt="Second Slide">
+                <h3>Resiliency, morphology, and entropic transformations in high-entropy oxide nanoribbons</h3>
+                <p>One-dimensional high-entropy oxides tested across temperature, pressure, and chemical extremes.</p>
+              </div>
+            </article>
+
+            <article class="resource-card">
+              <a
+                class="card-link"
+                href="https://doi.org/10.1016/j.electacta.2024.145193"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open capacitive deionization and electrochemical performance publication"
+              ></a>
+              <div class="card-media media-electrode" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <span>Electrochimica Acta</span>
+                  <span>2024</span>
                 </div>
-                <div class="carousel-item">
-                    <img src="_1UI3990.jpg" class="d-block w-100" alt="Third Slide">
+                <h3>Capacitive deionization and electrochemical performance of hierarchical porous electrodes</h3>
+                <p>Nitrogen and phosphorus doped CNT electrodes enabled by removable NaCl templating.</p>
+              </div>
+            </article>
+
+            <article class="resource-card">
+              <a
+                class="card-link"
+                href="https://doi.org/10.1021/acsnano.3c04178"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open thermodynamics and kinetics in anisotropic growth publication"
+              ></a>
+              <div class="card-media media-growth" aria-hidden="true">
+                <span class="axis x"></span>
+                <span class="axis y"></span>
+                <span class="bar b1"></span>
+                <span class="bar b2"></span>
+                <span class="bar b3"></span>
+                <span class="bar b4"></span>
+                <span class="curve"></span>
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <span>ACS Nano</span>
+                  <span>2023</span>
                 </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+                <h3>Thermodynamics and kinetics in anisotropic growth of one-dimensional midentropy nanoribbons</h3>
+                <p>Mechanistic insight into one-dimensional nanoribbon formation and growth directionality.</p>
+              </div>
+            </article>
 
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button">About Me</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button">My Work</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button">Contact</button>
-            </li>
-        </ul>
+            <article class="resource-card">
+              <a
+                class="card-link"
+                href="https://www.azonano.com/news.aspx?newsID=41420"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open news article about novel materials built to withstand extreme environments"
+              ></a>
+              <div class="card-media media-pressure" aria-hidden="true">
+                <span class="press top"></span>
+                <span class="press bottom"></span>
+                <span class="sample"></span>
+                <span class="spark s1"></span>
+                <span class="spark s2"></span>
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <span>Research News</span>
+                  <span>2025</span>
+                </div>
+                <h3>Novel materials built to withstand extreme environments</h3>
+                <p>A public-facing summary of high-entropy oxide nanoribbons and their harsh-environment promise.</p>
+              </div>
+            </article>
+          </div>
+        </section>
 
-        <div class="tab-content p-3 border border-top-0" id="myTabContent">
-            <div class="tab-pane fade show active" id="home">
-                <h3>About Me</h3>
-                <p>Contact information: hshahb4@uic.edu .</p>
-            </div>
-            <div class="tab-pane fade" id="profile">
-                <h3>My Work</h3>
-                <p>Here you can list your projects or skills.</p>
-            </div>
-            <div class="tab-pane fade" id="contact">
-                <h3>Contact</h3>
-                <p>Email: me@example.com</p>
-            </div>
-        </div>
+        <section class="section publication-section" id="publications">
+          <div class="section-kicker">Publication Index</div>
+          <div class="section-heading">
+            <h2>Technical Publications</h2>
+            <p>A compact reading list for visitors who want the formal records.</p>
+          </div>
 
+          <div class="publication-list">
+            <a class="publication-row" href="https://pubmed.ncbi.nlm.nih.gov/40440365/" target="_blank" rel="noreferrer">
+              <span class="pub-year">2025</span>
+              <span class="pub-title">Resiliency, morphology, and entropic transformations in high-entropy oxide nanoribbons</span>
+              <span class="pub-journal">Science</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 17 17 7M8 7h9v9" />
+              </svg>
+            </a>
+            <a class="publication-row" href="https://doi.org/10.1016/j.electacta.2024.145193" target="_blank" rel="noreferrer">
+              <span class="pub-year">2024</span>
+              <span class="pub-title">Capacitive deionization and electrochemical performance of hierarchical porous electrodes</span>
+              <span class="pub-journal">Electrochimica Acta</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 17 17 7M8 7h9v9" />
+              </svg>
+            </a>
+            <a class="publication-row" href="https://pubmed.ncbi.nlm.nih.gov/37467377/" target="_blank" rel="noreferrer">
+              <span class="pub-year">2023</span>
+              <span class="pub-title">Thermodynamics and kinetics in anisotropic growth of one-dimensional midentropy nanoribbons</span>
+              <span class="pub-journal">ACS Nano</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 17 17 7M8 7h9v9" />
+              </svg>
+            </a>
+          </div>
+        </section>
+
+        <section class="cta-section" id="contact">
+          <div>
+            <p class="section-kicker">Let’s Connect</p>
+            <h2>Open to collaborations in materials, electrochemistry, and characterization.</h2>
+          </div>
+          <div class="cta-actions">
+            <a class="primary-button" href="mailto:hshahb4@uic.edu">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 6h16v12H4z" />
+                <path d="m4 7 8 6 8-6" />
+              </svg>
+              Email
+            </a>
+            <a class="secondary-button" href="https://github.com/hessamshahbazi" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3c3 0 6-2 6-6 .1-1.3-.3-2.6-1.2-3.5.4-1.1.4-2.3 0-3.5 0 0-1 0-3 1.5A10.4 10.4 0 0 0 12 3a10.4 10.4 0 0 0-3.8.5C6.2 2 5.2 2 5.2 2c-.4 1.2-.4 2.4 0 3.5A5 5 0 0 0 4 9c0 4 3 6 6 6a4.8 4.8 0 0 0-1 3v4" />
+                <path d="M9 18c-4.5 2-5-2-7-2" />
+              </svg>
+              GitHub
+            </a>
+            <a class="secondary-button" href="https://www.linkedin.com/in/hessam-shahbazi/" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
+                <path d="M2 9h4v12H2z" />
+                <path d="M4 4h.01" />
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>Designed for GitHub Pages. &copy; <span data-year></span> Hessam Shahbazi.</p>
+        <a href="#home">Back to top</a>
+      </footer>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script src="script.js" defer></script>
+  </body>
 </html>
