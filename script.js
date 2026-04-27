@@ -38,10 +38,8 @@ const observer = new IntersectionObserver(
 
     if (!visible) return;
 
-    const activeHash = visible.target.id === "home" ? "#resources" : `#${visible.target.id}`;
-
     navLinks.forEach((link) => {
-      link.classList.toggle("active", link.getAttribute("href") === activeHash);
+      link.classList.toggle("active", link.getAttribute("href") === `#${visible.target.id}`);
     });
   },
   {
